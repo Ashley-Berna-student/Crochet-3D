@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3430,6 +3430,7 @@ GameObject:
   - component: {fileID: 920316279}
   - component: {fileID: 920316278}
   - component: {fileID: 920316277}
+  - component: {fileID: 920316280}
   m_Layer: 5
   m_Name: Delete
   m_TagString: Untagged
@@ -3551,6 +3552,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920316275}
   m_CullTransparentMesh: 1
+--- !u!114 &920316280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920316275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31762a1825d56e4ca7d2f44892835e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  singleCrochet: {fileID: 0}
 --- !u!1001 &928354248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3929,18 +3943,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7818007312887016746, guid: c9d23fc1e8402d24f81d9a294f60110f, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &960017070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3991,8 +3993,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad99faaa2342af747902de9bf605991f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToInstantiate: {fileID: 7818007312887016746, guid: c9d23fc1e8402d24f81d9a294f60110f, type: 3}
-  instantiationPosition: {x: -2.35, y: 2.111, z: 1.269}
+  prefabToInstantiate: {fileID: 986669121310436247, guid: af82e513b6be00241945eea86d5824b3, type: 3}
+  instantiationPosition: {x: -2.35, y: 2.111, z: 0}
+  lastStitch: {fileID: 0}
 --- !u!1001 &971098038
 PrefabInstance:
   m_ObjectHideFlags: 0
