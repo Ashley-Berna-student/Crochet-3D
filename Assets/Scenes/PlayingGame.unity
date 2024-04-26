@@ -3994,7 +3994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToInstantiate: {fileID: 986669121310436247, guid: af82e513b6be00241945eea86d5824b3, type: 3}
-  instantiationPosition: {x: -2.35, y: 2.111, z: 0}
+  instantiationPosition: {x: -2.35, y: 2.111, z: -1}
   lastStitch: {fileID: 0}
 --- !u!1001 &971098038
 PrefabInstance:
