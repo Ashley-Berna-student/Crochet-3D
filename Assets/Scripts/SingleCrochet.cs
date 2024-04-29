@@ -20,7 +20,7 @@ namespace Crocheting
             button.onClick.AddListener(CreateStitch);
         }
 
-        void CreateStitch()
+        public void CreateStitch()
         {
             // Calculate the position for the new stitch
             Vector3 newPosition = Vector3.zero;
@@ -45,6 +45,8 @@ namespace Crocheting
 
             // Update the last stitch reference
             lastStitch = newStitch;
+
+            print("new position " + newPosition);
         }
 
 
