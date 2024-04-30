@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,40 +5,52 @@ namespace Crocheting
 {
     public class AddRow : MonoBehaviour
     {
-        public GameObject singleCrochetGameObject;
-        public float rowHeight = 0.1f;
+        public SingleCrochet singleCrochet; // Reference to the SingleCrochet script
+        public Vector3 originalPosition; // Store the initial position of the first stitch
 
         // Start is called before the first frame update
         void Start()
         {
             Button button = GetComponent<Button>();
-            button.onClick.AddListener(AddNewRow);
+            if (button != null)
+            {
+                // Remove any existing listeners
+                button.onClick.RemoveAllListeners();
+
+                // Add listener to the button
+                button.onClick.AddListener(AddNewRow);
+            }
+
+            originalPosition = new Vector3(-2.35f, 2.111f, -1f);
         }
 
         public void AddNewRow()
         {
-            SingleCrochet singleCrochet = singleCrochetGameObject.GetComponent<SingleCrochet>();
+            // Disable the button temporarily to prevent multiple clicks
+            GetComponent<Button>().interactable = false;
 
             if (singleCrochet == null)
             {
-                print("SingleCrochet reference is missing");
+                Debug.LogWarning("SingleCrochet reference is missing");
+                // Re-enable the button
+                GetComponent<Button>().interactable = true;
                 return;
             }
 
-            Vector3 lastStitchPosition = singleCrochet.LastStitch != null ? singleCrochet.LastStitch.transform.position : singleCrochet.instantiationPosition;
+            // Set the instantiation position for the next row
+            singleCrochet.instantiationPosition = new Vector3(originalPosition.x, singleCrochet.LastStitch != null ?
+                singleCrochet.LastStitch.transform.position.y + singleCrochet.rowHeight : originalPosition.y + singleCrochet.rowHeight, originalPosition.z);
 
-            // Calculate the new Y position for the next row
-            float newYPosition = lastStitchPosition.y + rowHeight;
+            // Reset lastStitch to null to place new row at instantiation position
+            singleCrochet.lastStitch = null;
 
-            // Use the existing X and Z positions, but update the Y position
-            Vector3 newPosition = singleCrochet.LastStitch != null ? singleCrochet.LastStitch.transform.position : singleCrochet.instantiationPosition;
-            newPosition.y = newYPosition;
-
-            // Create a new stitch at the updated position
-            singleCrochet.instantiationPosition = newPosition;
-
-            // Create a new stitch at the updated position
+            // Create a new row of stitches at the updated position
             singleCrochet.CreateStitch();
+            Debug.Log("Added row");
+
+            // Re-enable the button after row addition is completed
+            GetComponent<Button>().interactable = true;
         }
     }
 }
+

@@ -11,6 +11,8 @@ namespace Crocheting
         public GameObject lastStitch;
         private List<GameObject> stitches = new List<GameObject>();
 
+        public float rowHeight = 0.1f; // Added for row height control
+
         public GameObject LastStitch => lastStitch;
         public List<GameObject> Stitches => stitches;
 

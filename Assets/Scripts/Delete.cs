@@ -8,10 +8,12 @@ namespace Crocheting
     public class Delete : MonoBehaviour
     {
         public SingleCrochet singleCrochet;
+        public AddRow addRowScript; // Reference to the AddRow script
 
-        void Start () 
+        void Start()
         {
             singleCrochet = FindObjectOfType<SingleCrochet>();
+            addRowScript = FindObjectOfType<AddRow>(); // Assign the reference to AddRow script
             Button deleteButton = GetComponent<Button>();
 
             deleteButton.onClick.AddListener(DeleteLastStitch);
@@ -37,7 +39,10 @@ namespace Crocheting
             }
             else
             {
-                Debug.LogWarning("No stitches to delete.");
+                Debug.LogWarning("No stitches left in the scene. Resetting to original position.");
+
+                // Reset the position to the original position defined in the AddRow script
+                singleCrochet.instantiationPosition = addRowScript.originalPosition;
             }
         }
     }

@@ -1334,7 +1334,6 @@ Transform:
   m_Children:
   - {fileID: 511259730}
   - {fileID: 430947049}
-  - {fileID: 444197233}
   - {fileID: 944489365}
   - {fileID: 1895533745}
   - {fileID: 31889066}
@@ -1577,8 +1576,8 @@ Transform:
   m_GameObject: {fileID: 444197232}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.425, y: -0.049999952, z: 2.8600001}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.6666667}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 43856270}
@@ -1619,7 +1618,7 @@ Transform:
   - {fileID: 1349452952}
   - {fileID: 928354249}
   - {fileID: 1114081722}
-  m_Father: {fileID: 285301408}
+  m_Father: {fileID: 870058692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &451855594
 GameObject:
@@ -3232,7 +3231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080242134782694, guid: 4737cade184983e44b580bdebbea33a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.29
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 4080242134782694, guid: 4737cade184983e44b580bdebbea33a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3264,7 +3263,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4080242134782694, guid: 4737cade184983e44b580bdebbea33a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 444197233}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4737cade184983e44b580bdebbea33a6, type: 3}
 --- !u!4 &870058692 stripped
@@ -3643,7 +3645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31762a1825d56e4ca7d2f44892835e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  singleCrochet: {fileID: 0}
+  singleCrochet: {fileID: 960017072}
+  addRowScript: {fileID: 1797873392}
 --- !u!1001 &928354248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4075,6 +4078,7 @@ MonoBehaviour:
   prefabToInstantiate: {fileID: 986669121310436247, guid: af82e513b6be00241945eea86d5824b3, type: 3}
   instantiationPosition: {x: -2.35, y: 2.111, z: -1}
   lastStitch: {fileID: 0}
+  rowHeight: 0.06
 --- !u!1001 &971098038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7370,8 +7374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f97c87b8b3bb1408339c65d5b18428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  singleCrochetGameObject: {fileID: 960017067}
-  rowHeight: 1
+  singleCrochet: {fileID: 960017072}
+  originalPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &1810851443
 PrefabInstance:
   m_ObjectHideFlags: 0
