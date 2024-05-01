@@ -176,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355285527071799943}
   m_Layer: 0
-  m_Name: DoubleCrochet(Clone)(Clone)
+  m_Name: Increase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
