@@ -45,8 +45,8 @@ namespace Crocheting
             singleCrochet.lastStitch = null;
 
             // Create a new row of stitches at the updated position
-            singleCrochet.CreateStitch();
-            Debug.Log("Added row");
+            //singleCrochet.CreateStitch();
+            //Debug.Log("Added row");
 
             // Re-enable the button after row addition is completed
             GetComponent<Button>().interactable = true;
