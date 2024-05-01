@@ -13,6 +13,8 @@ namespace Crocheting
 
         public float rowHeight = 0.1f; // Added for row height control
 
+        public GameObject increasePrefabToInstantiate;
+
         public GameObject LastStitch => lastStitch;
         public List<GameObject> Stitches => stitches;
 
@@ -78,5 +80,36 @@ namespace Crocheting
                 Destroy(stitchToDelete);
             }
         }
+
+        public void CreateIncreaseStitch()
+        {
+            // Calculate the position for the new stitch
+            Vector3 newPosition = Vector3.zero;
+
+            if (lastStitch != null)
+            {
+                // Offset the position based on the size of the SingleCrochet prefab along the Z-axis
+                float zOffset = prefabToInstantiate.transform.localScale.z;
+                Vector3 offset = new Vector3(0f, 0f, zOffset);
+                newPosition = lastStitch.transform.position + offset;
+            }
+            else
+            {
+                // If there's no last stitch, use the instantiation position
+                newPosition = instantiationPosition;
+            }
+
+            // Instantiate the increase stitch prefab at the calculated position
+            GameObject newStitch = Instantiate(increasePrefabToInstantiate, newPosition, Quaternion.identity);
+
+            // Add the new stitch to the list
+            stitches.Add(newStitch);
+
+            // Update the last stitch reference
+            lastStitch = newStitch;
+
+            Debug.Log("New Increase stitch created at position: " + newPosition);
+        }
+
     }
 }

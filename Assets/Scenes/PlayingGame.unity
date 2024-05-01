@@ -4079,6 +4079,7 @@ MonoBehaviour:
   instantiationPosition: {x: -2.35, y: 2.111, z: -1}
   lastStitch: {fileID: 0}
   rowHeight: 0.06
+  increasePrefabToInstantiate: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
 --- !u!1001 &971098038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5796,6 +5797,7 @@ GameObject:
   - component: {fileID: 1322308696}
   - component: {fileID: 1322308695}
   - component: {fileID: 1322308694}
+  - component: {fileID: 1322308697}
   m_Layer: 5
   m_Name: Increase
   m_TagString: Untagged
@@ -5917,6 +5919,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322308692}
   m_CullTransparentMesh: 1
+--- !u!114 &1322308697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322308692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7656dc3b7a6a3b446971cce5efbdae39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  singleCrochet: {fileID: 960017072}
 --- !u!1001 &1349452951
 PrefabInstance:
   m_ObjectHideFlags: 0
