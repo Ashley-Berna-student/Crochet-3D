@@ -36,6 +36,9 @@ namespace Crocheting
                 GetComponent<Button>().interactable = true;
                 return;
             }
+            singleCrochet.rowCounter += 1;
+
+            print("row number " + singleCrochet.rowCounter);
 
             // Set the instantiation position for the next row
             singleCrochet.instantiationPosition = new Vector3(originalPosition.x, singleCrochet.LastStitch != null ?

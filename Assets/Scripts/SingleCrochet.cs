@@ -16,6 +16,8 @@ namespace Crocheting
         public GameObject increasePrefabToInstantiate;
         public GameObject decreasePefabToInstantiate;
 
+        public int rowCounter = 1;
+
         public GameObject LastStitch => lastStitch;
         public List<GameObject> Stitches => stitches;
 
