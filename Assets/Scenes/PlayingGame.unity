@@ -5043,7 +5043,7 @@ MonoBehaviour:
   lastStitch: {fileID: 0}
   rowHeight: 0.06
   increasePrefabToInstantiate: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  decreasePefabToInstantiate: {fileID: 0}
+  decreasePefabToInstantiate: {fileID: 5655389101600400670, guid: 8b5d75c5d29d0454da0c58d5cea94799, type: 3}
   rowCounter: 1
 --- !u!1001 &971098038
 PrefabInstance:
