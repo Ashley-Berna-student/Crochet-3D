@@ -24,10 +24,10 @@ namespace Crocheting
         void Start()
         {
             Button button = GetComponent<Button>();
-            button.onClick.AddListener(CreateStitch);
+            button.onClick.AddListener(CreateSingleCrochet);
         }
 
-        public void CreateStitch()
+        public void CreateSingleCrochet()
         {
             // Calculate the position for the new stitch
             Vector3 newPosition = Vector3.zero;
@@ -52,8 +52,6 @@ namespace Crocheting
 
             // Update the last stitch reference
             lastStitch = newStitch;
-
-            print("new position " + newPosition);
         }
 
 
@@ -110,8 +108,6 @@ namespace Crocheting
 
             // Update the last stitch reference
             lastStitch = newStitch;
-
-            Debug.Log("New Increase stitch created at position: " + newPosition);
         }
 
         public void CreateDecreaseStitch()
@@ -140,8 +136,6 @@ namespace Crocheting
 
             // Update the last stitch reference
             lastStitch = newStitch;
-
-            Debug.Log("New Decrease stitch created at position: " + newPosition);
         }
 
     }

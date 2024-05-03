@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SC
   - SingleCrochet
+  - IncreaseStitch
+  - DecreaseStitch
   layers:
   - Default
   - TransparentFX
