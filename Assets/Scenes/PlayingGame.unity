@@ -1514,7 +1514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToChangeColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeSCColor: {fileID: 0}
+  ChangeINCColor: {fileID: 0}
+  ChangeDECColor: {fileID: 0}
   targetMaterial: {fileID: 2100000, guid: f22301492c57580489bc2a0eae7f7a7f, type: 2}
 --- !u!114 &277317970
 MonoBehaviour:
@@ -2916,7 +2918,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToChangeColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeSCColor: {fileID: 0}
+  ChangeINCColor: {fileID: 0}
+  ChangeDECColor: {fileID: 0}
   targetMaterial: {fileID: 2100000, guid: 84f040b23ae4b7f4ead25862a9189a28, type: 2}
 --- !u!114 &651570680
 MonoBehaviour:
@@ -3530,7 +3534,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToChangeColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeSCColor: {fileID: 0}
+  ChangeINCColor: {fileID: 0}
+  ChangeDECColor: {fileID: 0}
   targetMaterial: {fileID: 2100000, guid: 8403ca35700ce6b4eab97aafd8b49407, type: 2}
 --- !u!114 &800125003
 MonoBehaviour:
@@ -3935,7 +3941,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToChangeColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeINCColor: {fileID: 2798618613132419245, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
+  ChangeDECColor: {fileID: 8462995320828329390, guid: cc170ea4272fd374fb69761635c55c6f, type: 3}
   targetMaterial: {fileID: 2100000, guid: 95d408d6119977041ac8bb3674501a46, type: 2}
 --- !u!114 &857986379
 MonoBehaviour:
@@ -5042,8 +5050,8 @@ MonoBehaviour:
   instantiationPosition: {x: -2.35, y: 2.111, z: -1}
   lastStitch: {fileID: 0}
   rowHeight: 0.06
-  increasePrefabToInstantiate: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  decreasePefabToInstantiate: {fileID: 5655389101600400670, guid: 8b5d75c5d29d0454da0c58d5cea94799, type: 3}
+  increasePrefabToInstantiate: {fileID: 2798618613132419245, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
+  decreasePefabToInstantiate: {fileID: 8462995320828329390, guid: cc170ea4272fd374fb69761635c55c6f, type: 3}
   rowCounter: 1
 --- !u!1001 &971098038
 PrefabInstance:
@@ -5793,7 +5801,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToChangeColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeSCColor: {fileID: 0}
+  ChangeINCColor: {fileID: 0}
+  ChangeDECColor: {fileID: 0}
   targetMaterial: {fileID: 2100000, guid: 4071afbc7f453974ea8f7c30f7cb79c2, type: 2}
 --- !u!114 &1064567037
 MonoBehaviour:
@@ -6475,7 +6485,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToChangeColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeSCColor: {fileID: 0}
+  ChangeINCColor: {fileID: 0}
+  ChangeDECColor: {fileID: 0}
   targetMaterial: {fileID: 2100000, guid: f141c4d6eabe14a4b84e26bad2163681, type: 2}
 --- !u!1001 &1190869594
 PrefabInstance:
@@ -7711,7 +7723,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToChangeColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeSCColor: {fileID: 0}
+  ChangeINCColor: {fileID: 0}
+  ChangeDECColor: {fileID: 0}
   targetMaterial: {fileID: 2100000, guid: e82a0c83625e49b49bdaa41387a46613, type: 2}
 --- !u!114 &1437637212
 MonoBehaviour:
@@ -10243,7 +10257,6 @@ GameObject:
   - component: {fileID: 2098961693}
   - component: {fileID: 2098961692}
   - component: {fileID: 2098961691}
-  - component: {fileID: 2098961690}
   - component: {fileID: 2098961694}
   m_Layer: 5
   m_Name: ChangeColorRed
@@ -10272,21 +10285,6 @@ RectTransform:
   m_AnchoredPosition: {x: -91.96634, y: 68.662415}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2098961690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098961688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increasePrefab: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  descendPrefab: {fileID: 5655389101600400670, guid: 8b5d75c5d29d0454da0c58d5cea94799, type: 3}
-  targetMaterial: {fileID: 2100000, guid: 0d53ed3aa183ae04da9a4c451ce3554d, type: 2}
 --- !u!114 &2098961691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10381,7 +10379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToChangeColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeINCColor: {fileID: 2798618613132419245, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
+  ChangeDECColor: {fileID: 8462995320828329390, guid: cc170ea4272fd374fb69761635c55c6f, type: 3}
   targetMaterial: {fileID: 2100000, guid: 0d53ed3aa183ae04da9a4c451ce3554d, type: 2}
 --- !u!1001 &2119610119
 PrefabInstance:
