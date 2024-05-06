@@ -7,17 +7,16 @@ namespace Crocheting
     {
         public GameObject ChangeSCColor;
         public GameObject ChangeINCColor;
-        public GameObject ChangeDECColor;
         public Material targetMaterial; // The material to switch to when the button is pressed
 
-        private Renderer prefabRenderer; // Reference to the renderer component of the prefab
+        private Renderer scRenderer; // Renderer component for ChangeSCColor
+        private Renderer incRenderer; // Renderer component for ChangeINCColor
 
         void Start()
         {
-            // Get the renderer component of the prefab
-            prefabRenderer = ChangeSCColor.GetComponent<Renderer>();
-            prefabRenderer = ChangeINCColor.GetComponent<Renderer>();
-            prefabRenderer = ChangeDECColor.GetComponent<Renderer>();
+            // Get the renderer components of the prefabs
+            scRenderer = ChangeSCColor.GetComponent<Renderer>();
+            incRenderer = ChangeINCColor.GetComponent<Renderer>();
 
             // Add a listener to the button's onClick event
             Button button = GetComponent<Button>();
@@ -26,8 +25,9 @@ namespace Crocheting
 
         void ChangeColor()
         {
-            // Change the material of the prefab to the target material
-            prefabRenderer.material = targetMaterial;
+            // Change the material of each prefab to the target material
+            scRenderer.material = targetMaterial;
+            incRenderer.material = targetMaterial;
         }
     }
 }

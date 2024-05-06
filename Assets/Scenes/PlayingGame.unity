@@ -1473,7 +1473,6 @@ GameObject:
   - component: {fileID: 277317973}
   - component: {fileID: 277317972}
   - component: {fileID: 277317971}
-  - component: {fileID: 277317970}
   - component: {fileID: 277317969}
   m_Layer: 5
   m_Name: ChangeColorPurple
@@ -1514,24 +1513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSCColor: {fileID: 0}
-  ChangeINCColor: {fileID: 0}
-  ChangeDECColor: {fileID: 0}
-  targetMaterial: {fileID: 2100000, guid: f22301492c57580489bc2a0eae7f7a7f, type: 2}
---- !u!114 &277317970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277317967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increasePrefab: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  descendPrefab: {fileID: 5655389101600400670, guid: 8b5d75c5d29d0454da0c58d5cea94799, type: 3}
+  ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeINCColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
+  ChangeDECColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
   targetMaterial: {fileID: 2100000, guid: f22301492c57580489bc2a0eae7f7a7f, type: 2}
 --- !u!114 &277317971
 MonoBehaviour:
@@ -2877,7 +2861,6 @@ GameObject:
   - component: {fileID: 651570683}
   - component: {fileID: 651570682}
   - component: {fileID: 651570681}
-  - component: {fileID: 651570680}
   - component: {fileID: 651570679}
   m_Layer: 5
   m_Name: ChangeColorPink
@@ -2918,24 +2901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSCColor: {fileID: 0}
-  ChangeINCColor: {fileID: 0}
-  ChangeDECColor: {fileID: 0}
-  targetMaterial: {fileID: 2100000, guid: 84f040b23ae4b7f4ead25862a9189a28, type: 2}
---- !u!114 &651570680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651570677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increasePrefab: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  descendPrefab: {fileID: 5655389101600400670, guid: 8b5d75c5d29d0454da0c58d5cea94799, type: 3}
+  ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeINCColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
+  ChangeDECColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
   targetMaterial: {fileID: 2100000, guid: 84f040b23ae4b7f4ead25862a9189a28, type: 2}
 --- !u!114 &651570681
 MonoBehaviour:
@@ -3493,7 +3461,6 @@ GameObject:
   - component: {fileID: 800125006}
   - component: {fileID: 800125005}
   - component: {fileID: 800125004}
-  - component: {fileID: 800125003}
   - component: {fileID: 800125002}
   m_Layer: 5
   m_Name: ChangeColorBlue
@@ -3534,24 +3501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSCColor: {fileID: 0}
-  ChangeINCColor: {fileID: 0}
-  ChangeDECColor: {fileID: 0}
-  targetMaterial: {fileID: 2100000, guid: 8403ca35700ce6b4eab97aafd8b49407, type: 2}
---- !u!114 &800125003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800125000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increasePrefab: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  descendPrefab: {fileID: 5655389101600400670, guid: 8b5d75c5d29d0454da0c58d5cea94799, type: 3}
+  ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeINCColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
+  ChangeDECColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
   targetMaterial: {fileID: 2100000, guid: 8403ca35700ce6b4eab97aafd8b49407, type: 2}
 --- !u!114 &800125004
 MonoBehaviour:
@@ -3900,7 +3852,6 @@ GameObject:
   - component: {fileID: 857986382}
   - component: {fileID: 857986381}
   - component: {fileID: 857986380}
-  - component: {fileID: 857986379}
   - component: {fileID: 857986378}
   m_Layer: 5
   m_Name: ChangeColorOrange
@@ -3942,23 +3893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
-  ChangeINCColor: {fileID: 2798618613132419245, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  ChangeDECColor: {fileID: 8462995320828329390, guid: cc170ea4272fd374fb69761635c55c6f, type: 3}
-  targetMaterial: {fileID: 2100000, guid: 95d408d6119977041ac8bb3674501a46, type: 2}
---- !u!114 &857986379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857986376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increasePrefab: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  descendPrefab: {fileID: 5655389101600400670, guid: 8b5d75c5d29d0454da0c58d5cea94799, type: 3}
+  ChangeINCColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
+  ChangeDECColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
   targetMaterial: {fileID: 2100000, guid: 95d408d6119977041ac8bb3674501a46, type: 2}
 --- !u!114 &857986380
 MonoBehaviour:
@@ -5050,8 +4986,8 @@ MonoBehaviour:
   instantiationPosition: {x: -2.35, y: 2.111, z: -1}
   lastStitch: {fileID: 0}
   rowHeight: 0.06
-  increasePrefabToInstantiate: {fileID: 2798618613132419245, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  decreasePefabToInstantiate: {fileID: 8462995320828329390, guid: cc170ea4272fd374fb69761635c55c6f, type: 3}
+  increasePrefabToInstantiate: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
+  decreasePefabToInstantiate: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
   rowCounter: 1
 --- !u!1001 &971098038
 PrefabInstance:
@@ -5760,7 +5696,6 @@ GameObject:
   - component: {fileID: 1064567040}
   - component: {fileID: 1064567039}
   - component: {fileID: 1064567038}
-  - component: {fileID: 1064567037}
   - component: {fileID: 1064567036}
   m_Layer: 5
   m_Name: ChangeColorWhite
@@ -5801,24 +5736,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSCColor: {fileID: 0}
-  ChangeINCColor: {fileID: 0}
-  ChangeDECColor: {fileID: 0}
-  targetMaterial: {fileID: 2100000, guid: 4071afbc7f453974ea8f7c30f7cb79c2, type: 2}
---- !u!114 &1064567037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064567034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increasePrefab: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  descendPrefab: {fileID: 5655389101600400670, guid: 8b5d75c5d29d0454da0c58d5cea94799, type: 3}
+  ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeINCColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
+  ChangeDECColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
   targetMaterial: {fileID: 2100000, guid: 4071afbc7f453974ea8f7c30f7cb79c2, type: 2}
 --- !u!114 &1064567038
 MonoBehaviour:
@@ -6347,7 +6267,6 @@ GameObject:
   - component: {fileID: 1176419235}
   - component: {fileID: 1176419234}
   - component: {fileID: 1176419233}
-  - component: {fileID: 1176419232}
   - component: {fileID: 1176419236}
   m_Layer: 5
   m_Name: ChangeColorGreen
@@ -6376,21 +6295,6 @@ RectTransform:
   m_AnchoredPosition: {x: 41.233673, y: 68.662415}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1176419232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176419230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increasePrefab: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  descendPrefab: {fileID: 5655389101600400670, guid: 8b5d75c5d29d0454da0c58d5cea94799, type: 3}
-  targetMaterial: {fileID: 2100000, guid: f141c4d6eabe14a4b84e26bad2163681, type: 2}
 --- !u!114 &1176419233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6485,9 +6389,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSCColor: {fileID: 0}
-  ChangeINCColor: {fileID: 0}
-  ChangeDECColor: {fileID: 0}
+  ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeINCColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
+  ChangeDECColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
   targetMaterial: {fileID: 2100000, guid: f141c4d6eabe14a4b84e26bad2163681, type: 2}
 --- !u!1001 &1190869594
 PrefabInstance:
@@ -7682,7 +7586,6 @@ GameObject:
   - component: {fileID: 1437637215}
   - component: {fileID: 1437637214}
   - component: {fileID: 1437637213}
-  - component: {fileID: 1437637212}
   - component: {fileID: 1437637211}
   m_Layer: 5
   m_Name: ChangeColorYellow
@@ -7723,24 +7626,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0e8f94d7d77e46a83ccf9a09882cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSCColor: {fileID: 0}
-  ChangeINCColor: {fileID: 0}
-  ChangeDECColor: {fileID: 0}
-  targetMaterial: {fileID: 2100000, guid: e82a0c83625e49b49bdaa41387a46613, type: 2}
---- !u!114 &1437637212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437637209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  increasePrefab: {fileID: 4050069888981835032, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  descendPrefab: {fileID: 5655389101600400670, guid: 8b5d75c5d29d0454da0c58d5cea94799, type: 3}
+  ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
+  ChangeINCColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
+  ChangeDECColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
   targetMaterial: {fileID: 2100000, guid: e82a0c83625e49b49bdaa41387a46613, type: 2}
 --- !u!114 &1437637213
 MonoBehaviour:
@@ -10380,8 +10268,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
-  ChangeINCColor: {fileID: 2798618613132419245, guid: ddbec633c0d8ae24599a11fdcfa1ce63, type: 3}
-  ChangeDECColor: {fileID: 8462995320828329390, guid: cc170ea4272fd374fb69761635c55c6f, type: 3}
+  ChangeINCColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
+  ChangeDECColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
   targetMaterial: {fileID: 2100000, guid: 0d53ed3aa183ae04da9a4c451ce3554d, type: 2}
 --- !u!1001 &2119610119
 PrefabInstance:

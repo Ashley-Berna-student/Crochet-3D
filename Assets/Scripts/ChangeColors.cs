@@ -5,7 +5,6 @@ namespace Crocheting
 {
     public class ChangeColors : MonoBehaviour
     {
-        public GameObject increasePrefab;
         public GameObject descendPrefab;
         public Material targetMaterial; // The material to switch to when the button is pressed
 
@@ -18,9 +17,6 @@ namespace Crocheting
 
         void ChangeColor()
         {
-            // Change the color of increase prefab
-            ChangeColorOfPrefab(increasePrefab);
-
             // Change the color of descend prefab
             ChangeColorOfPrefab(descendPrefab);
         }
