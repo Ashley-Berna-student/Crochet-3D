@@ -1474,6 +1474,7 @@ GameObject:
   - component: {fileID: 277317972}
   - component: {fileID: 277317971}
   - component: {fileID: 277317969}
+  - component: {fileID: 277317974}
   m_Layer: 5
   m_Name: ChangeColorPurple
   m_TagString: Untagged
@@ -1514,8 +1515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
-  ChangeINCColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
-  ChangeDECColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
+  ChangeINCColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
   targetMaterial: {fileID: 2100000, guid: f22301492c57580489bc2a0eae7f7a7f, type: 2}
 --- !u!114 &277317971
 MonoBehaviour:
@@ -1599,6 +1599,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277317967}
   m_CullTransparentMesh: 1
+--- !u!114 &277317974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277317967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descendPrefab: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
+  targetMaterial: {fileID: 2100000, guid: f22301492c57580489bc2a0eae7f7a7f, type: 2}
 --- !u!1 &285301407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,6 +2876,7 @@ GameObject:
   - component: {fileID: 651570682}
   - component: {fileID: 651570681}
   - component: {fileID: 651570679}
+  - component: {fileID: 651570684}
   m_Layer: 5
   m_Name: ChangeColorPink
   m_TagString: Untagged
@@ -2902,8 +2917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
-  ChangeINCColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
-  ChangeDECColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
+  ChangeINCColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
   targetMaterial: {fileID: 2100000, guid: 84f040b23ae4b7f4ead25862a9189a28, type: 2}
 --- !u!114 &651570681
 MonoBehaviour:
@@ -2987,6 +3001,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651570677}
   m_CullTransparentMesh: 1
+--- !u!114 &651570684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651570677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descendPrefab: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
+  targetMaterial: {fileID: 2100000, guid: 84f040b23ae4b7f4ead25862a9189a28, type: 2}
 --- !u!1001 &651941331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3462,6 +3490,7 @@ GameObject:
   - component: {fileID: 800125005}
   - component: {fileID: 800125004}
   - component: {fileID: 800125002}
+  - component: {fileID: 800125007}
   m_Layer: 5
   m_Name: ChangeColorBlue
   m_TagString: Untagged
@@ -3502,8 +3531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
-  ChangeINCColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
-  ChangeDECColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
+  ChangeINCColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
   targetMaterial: {fileID: 2100000, guid: 8403ca35700ce6b4eab97aafd8b49407, type: 2}
 --- !u!114 &800125004
 MonoBehaviour:
@@ -3587,6 +3615,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800125000}
   m_CullTransparentMesh: 1
+--- !u!114 &800125007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800125000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descendPrefab: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
+  targetMaterial: {fileID: 2100000, guid: 8403ca35700ce6b4eab97aafd8b49407, type: 2}
 --- !u!1 &810123343
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,6 +3895,7 @@ GameObject:
   - component: {fileID: 857986381}
   - component: {fileID: 857986380}
   - component: {fileID: 857986378}
+  - component: {fileID: 857986383}
   m_Layer: 5
   m_Name: ChangeColorOrange
   m_TagString: Untagged
@@ -3894,7 +3937,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
   ChangeINCColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
-  ChangeDECColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
   targetMaterial: {fileID: 2100000, guid: 95d408d6119977041ac8bb3674501a46, type: 2}
 --- !u!114 &857986380
 MonoBehaviour:
@@ -3978,6 +4020,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857986376}
   m_CullTransparentMesh: 1
+--- !u!114 &857986383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857986376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descendPrefab: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
+  targetMaterial: {fileID: 2100000, guid: 95d408d6119977041ac8bb3674501a46, type: 2}
 --- !u!1001 &870058691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4987,7 +5043,7 @@ MonoBehaviour:
   lastStitch: {fileID: 0}
   rowHeight: 0.06
   increasePrefabToInstantiate: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
-  decreasePefabToInstantiate: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
+  decreasePefabToInstantiate: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
   rowCounter: 1
 --- !u!1001 &971098038
 PrefabInstance:
@@ -5697,6 +5753,7 @@ GameObject:
   - component: {fileID: 1064567039}
   - component: {fileID: 1064567038}
   - component: {fileID: 1064567036}
+  - component: {fileID: 1064567041}
   m_Layer: 5
   m_Name: ChangeColorWhite
   m_TagString: Untagged
@@ -5737,8 +5794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
-  ChangeINCColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
-  ChangeDECColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
+  ChangeINCColor: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
   targetMaterial: {fileID: 2100000, guid: 4071afbc7f453974ea8f7c30f7cb79c2, type: 2}
 --- !u!114 &1064567038
 MonoBehaviour:
@@ -5822,6 +5878,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064567034}
   m_CullTransparentMesh: 1
+--- !u!114 &1064567041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064567034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descendPrefab: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
+  targetMaterial: {fileID: 2100000, guid: 4071afbc7f453974ea8f7c30f7cb79c2, type: 2}
 --- !u!1 &1101056064
 GameObject:
   m_ObjectHideFlags: 0
@@ -6268,6 +6338,7 @@ GameObject:
   - component: {fileID: 1176419234}
   - component: {fileID: 1176419233}
   - component: {fileID: 1176419236}
+  - component: {fileID: 1176419237}
   m_Layer: 5
   m_Name: ChangeColorGreen
   m_TagString: Untagged
@@ -6390,8 +6461,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
-  ChangeINCColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
-  ChangeDECColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
+  ChangeINCColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
+  targetMaterial: {fileID: 2100000, guid: f141c4d6eabe14a4b84e26bad2163681, type: 2}
+--- !u!114 &1176419237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176419230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descendPrefab: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
   targetMaterial: {fileID: 2100000, guid: f141c4d6eabe14a4b84e26bad2163681, type: 2}
 --- !u!1001 &1190869594
 PrefabInstance:
@@ -7587,6 +7671,7 @@ GameObject:
   - component: {fileID: 1437637214}
   - component: {fileID: 1437637213}
   - component: {fileID: 1437637211}
+  - component: {fileID: 1437637216}
   m_Layer: 5
   m_Name: ChangeColorYellow
   m_TagString: Untagged
@@ -7628,7 +7713,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
   ChangeINCColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
-  ChangeDECColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
   targetMaterial: {fileID: 2100000, guid: e82a0c83625e49b49bdaa41387a46613, type: 2}
 --- !u!114 &1437637213
 MonoBehaviour:
@@ -7712,6 +7796,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437637209}
   m_CullTransparentMesh: 1
+--- !u!114 &1437637216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437637209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descendPrefab: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
+  targetMaterial: {fileID: 2100000, guid: e82a0c83625e49b49bdaa41387a46613, type: 2}
 --- !u!1 &1448297030
 GameObject:
   m_ObjectHideFlags: 0
@@ -10146,6 +10244,7 @@ GameObject:
   - component: {fileID: 2098961692}
   - component: {fileID: 2098961691}
   - component: {fileID: 2098961694}
+  - component: {fileID: 2098961695}
   m_Layer: 5
   m_Name: ChangeColorRed
   m_TagString: Untagged
@@ -10269,7 +10368,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeSCColor: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
   ChangeINCColor: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
-  ChangeDECColor: {fileID: 2223034366077689919, guid: 33946c214a782264b88c1ab4bf61c120, type: 3}
+  targetMaterial: {fileID: 2100000, guid: 0d53ed3aa183ae04da9a4c451ce3554d, type: 2}
+--- !u!114 &2098961695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098961688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96be76322ae7fd74d95849ae3444b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descendPrefab: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
   targetMaterial: {fileID: 2100000, guid: 0d53ed3aa183ae04da9a4c451ce3554d, type: 2}
 --- !u!1001 &2119610119
 PrefabInstance:
