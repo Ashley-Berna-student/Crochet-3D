@@ -4529,7 +4529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a7d4a487a2657419edb2e079efb1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stitches: {fileID: 0}
+  stitches: {fileID: 960017073}
   addRowScript: {fileID: 1797873392}
 --- !u!1001 &928354248
 PrefabInstance:
@@ -4905,6 +4905,7 @@ GameObject:
   - component: {fileID: 960017070}
   - component: {fileID: 960017069}
   - component: {fileID: 960017072}
+  - component: {fileID: 960017073}
   m_Layer: 5
   m_Name: SingleCrochet
   m_TagString: SingleCrochet
@@ -5038,10 +5039,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c25baf2914cfc449a5742773d1abbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &960017073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960017067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dea7fdac1a5d459827199a319f49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   prefabToInstantiate: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
   instantiationPosition: {x: -2.35, y: 2.111, z: -1}
-  lastStitch: {fileID: 4155165344668012403, guid: 98c9ca1c9cacb9041a054b4fb05ae155, type: 3}
-  rowHeight: 0.01921516
+  lastStitch: {fileID: 0}
+  rowHeight: 0.06
   increasePrefabToInstantiate: {fileID: 3276686867762223624, guid: 0c2a61f04d4187642bd158caa2aebcbe, type: 3}
   decreasePefabToInstantiate: {fileID: 2215908588289643177, guid: 1e6236733e8a7514199a36121a582728, type: 3}
   rowCounter: 1
@@ -5657,7 +5670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315a6844ed207954f9b2e7b8e8819bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stitches: {fileID: 0}
+  stitches: {fileID: 960017073}
 --- !u!1001 &1064154560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7214,7 +7227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1733d3176ef8504a8f6f2b476cce803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stitches: {fileID: 0}
+  stitches: {fileID: 960017073}
 --- !u!1001 &1349452951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9061,7 +9074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd6ef79ffcdcbe468a699f2d967d278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stitches: {fileID: 0}
+  stitches: {fileID: 960017073}
   originalPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &1810851443
 PrefabInstance:

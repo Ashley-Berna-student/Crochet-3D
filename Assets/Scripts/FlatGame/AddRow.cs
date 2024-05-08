@@ -69,10 +69,12 @@ namespace Crocheting
             if (increaseAtOriginalPos)
             {
                 originalZPosition -= 0.02735f; // Increase Z position for increase stitch
+                print("moved z position to the left");
             }
             else if (decreaseAtOriginalPos)
             {
                 originalZPosition += 0.02735f; // Decrease Z position for decrease stitch
+                print("Moved z position to the right");
             }
 
             // Set the instantiation position for the next row
