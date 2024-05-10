@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MagicRingGame.unity
     guid: 144525b90fbed2e4f95114d2fcd6ecbe
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 48a9ee490eb19714eb1532f263cde8e8
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

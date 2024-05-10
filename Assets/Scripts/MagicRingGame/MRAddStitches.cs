@@ -58,15 +58,18 @@ namespace CrochetingMR
                 Destroy(stitchToDelete);
             }
         }
-
         public void CreateSingleCrochetMR()
         {
             // Calculate the position for the new stitch using polar coordinates
             float angle = (2 * Mathf.PI * stitches.Count) / (stitches.Count + 1); // Distribute the stitches evenly around the circle
+
+            // If it's the first row, rotate the prefab by 90 degrees along the y-axis
+            Quaternion rotation = rowCounter == 1 ? Quaternion.Euler(0f, 90f, 0f) : Quaternion.identity;
+
             Vector3 newPosition = magicRingCenter + new Vector3(Mathf.Cos(angle) * magicRingRadius, 0f, Mathf.Sin(angle) * magicRingRadius);
 
-            // Instantiate the stitch prefab at the calculated position
-            GameObject newStitch = Instantiate(prefabToInstantiate, newPosition, Quaternion.identity);
+            // Instantiate the stitch prefab at the calculated position with the appropriate rotation
+            GameObject newStitch = Instantiate(prefabToInstantiate, newPosition, rotation);
 
             // Add the new stitch to the list
             stitches.Add(newStitch);
