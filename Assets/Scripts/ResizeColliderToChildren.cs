@@ -1,10 +1,22 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ResizeColliderToChildren : MonoBehaviour
 {
+    private bool childrenAdded = false;
+
     private void Start()
     {
-        ResizeBoxCollider();
+        SceneManager.sceneLoaded += OnSceneLoaded; // Subscribe to the scene loaded event
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "FinalScene" && !childrenAdded)
+        {
+            ResizeBoxCollider();
+            childrenAdded = true;
+        }
     }
 
     private void ResizeBoxCollider()
@@ -26,10 +38,10 @@ public class ResizeColliderToChildren : MonoBehaviour
         }
 
         // Calculate combined bounds of all child colliders
-        Bounds combinedBounds = childColliders[0].bounds;
-        for (int i = 1; i < childColliders.Length; i++)
+        Bounds combinedBounds = new Bounds();
+        foreach (Collider childCollider in childColliders)
         {
-            combinedBounds.Encapsulate(childColliders[i].bounds);
+            combinedBounds.Encapsulate(childCollider.bounds);
         }
 
         // Resize the BoxCollider to encompass all child colliders

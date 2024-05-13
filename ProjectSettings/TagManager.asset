@@ -8,6 +8,12 @@ TagManager:
   - SingleCrochet
   - IncreaseStitch
   - DecreaseStitch
+  - Camera2
+  - Camera3
+  - Camera4
+  - UpDown
+  - LeftRight
+  - ForwardBAck
   layers:
   - Default
   - TransparentFX

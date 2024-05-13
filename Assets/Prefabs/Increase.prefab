@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5742376684684144917}
   - component: {fileID: 9044055495332123372}
   - component: {fileID: 9182576430884604861}
+  - component: {fileID: 3138597038821929375}
   m_Layer: 0
   m_Name: Increase
   m_TagString: IncreaseStitch
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f141c4d6eabe14a4b84e26bad2163681, type: 2}
+  - {fileID: 2100000, guid: e82a0c83625e49b49bdaa41387a46613, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3138597038821929375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3276686867762223624}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.01055, y: 1.8727703, z: 3.0071673}
+  m_Center: {x: 0.0032404661, y: -0.12375486, z: -0.008028091}

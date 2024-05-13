@@ -505,10 +505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cfc2ee82db87bc47b6b9e3eb85e01e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera1: {fileID: 1898200010}
-  camera2: {fileID: 1448297033}
-  camera3: {fileID: 836277235}
-  camera4: {fileID: 635464819}
 --- !u!114 &55439062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,12 +532,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.01908064, y: 0.06937408, z: 0.06530219}
+  m_Center: {x: -0.0002856255, y: 0.00126338, z: -0.002976745}
 --- !u!1001 &68411999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2879,7 +2875,7 @@ GameObject:
   - component: {fileID: 635464818}
   m_Layer: 0
   m_Name: Camera4
-  m_TagString: Untagged
+  m_TagString: Camera4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3439,6 +3435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 55439059}
+  cameraParent: {fileID: 541101717}
 --- !u!1001 &718716163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3943,7 +3940,7 @@ GameObject:
   - component: {fileID: 836277234}
   m_Layer: 0
   m_Name: Camera3
-  m_TagString: Untagged
+  m_TagString: Camera3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -7963,7 +7960,7 @@ GameObject:
   - component: {fileID: 1448297032}
   m_Layer: 0
   m_Name: Camera2
-  m_TagString: Untagged
+  m_TagString: Camera2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

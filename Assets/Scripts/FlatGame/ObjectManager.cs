@@ -5,11 +5,13 @@ using System.Linq;
 public class ObjectManager : MonoBehaviour
 {
     public GameObject parentObject;
+    public GameObject cameraParent;
 
     private void Start()
     {
         // Ensure the parent object persists between scenes
         DontDestroyOnLoad(parentObject);
+        DontDestroyOnLoad(cameraParent);
     }
 
     // Call this method when pressing the "done" button
@@ -19,11 +21,6 @@ public class ObjectManager : MonoBehaviour
         GameObject[] objectsWithTagSC = GameObject.FindGameObjectsWithTag("SingleCrochet");
         GameObject[] objectsWithTagIncrease = GameObject.FindGameObjectsWithTag("IncreaseStitch");
         GameObject[] objectsWithTagDecrease = GameObject.FindGameObjectsWithTag("DecreaseStitch");
-
-        Debug.Log("Found " + objectsWithTagSC.Length + " objects with tag SC");
-        Debug.Log("Found " + objectsWithTagIncrease.Length + " objects with tag IncreaseStitch");
-        Debug.Log("Found " + objectsWithTagDecrease.Length + " objects with tag DecreaseStitch");
-
         // Combine arrays into one
         GameObject[] objectsToGroup = objectsWithTagSC.Concat(objectsWithTagIncrease).Concat(objectsWithTagDecrease).ToArray();
 
@@ -38,7 +35,6 @@ public class ObjectManager : MonoBehaviour
             foreach (Transform child in obj.transform)
             {
                 child.SetParent(parentObject.transform);
-                Debug.Log("Setting parent for child " + child.name + " of " + obj.name + " to " + parentObject.name);
             }
         }
 
