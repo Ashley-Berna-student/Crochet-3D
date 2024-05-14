@@ -10,8 +10,11 @@ public class ObjectManager : MonoBehaviour
     private void Start()
     {
         // Ensure the parent object persists between scenes
-        DontDestroyOnLoad(parentObject);
-        DontDestroyOnLoad(cameraParent);
+        if (SceneManager.GetActiveScene().name != "FinalScene")
+        {
+            DontDestroyOnLoad(parentObject);
+            DontDestroyOnLoad(cameraParent);
+        }
     }
 
     // Call this method when pressing the "done" button
