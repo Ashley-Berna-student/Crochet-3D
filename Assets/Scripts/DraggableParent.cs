@@ -35,50 +35,27 @@ public class DraggableParent : MonoBehaviour
 
     private void InitializeCameras()
     {
-        // Find the parent holding all the cameras
-        Transform cameraParent = GameObject.Find("Static/Cameras").transform; // Adjust with the correct path to the parent holding cameras
+        // Find all cameras in the scene
+        Camera[] cameras = FindObjectsOfType<Camera>();
 
-        // Find all cameras under the parent
-        Camera[] cameras = cameraParent.GetComponentsInChildren<Camera>();
-
-        // Separate the cameras by their tags
+        // Debug: Print names and tags of all cameras found
         foreach (Camera camera in cameras)
         {
-            switch (camera.tag)
-            {
-                case "MainCamera":
-                    mainCamera = camera;
-                    break;
-                case "Camera2":
-                    camera2 = camera;
-                    break;
-                case "Camera3":
-                    camera3 = camera;
-                    break;
-                case "Camera4":
-                    camera4 = camera;
-                    break;
-                default:
-                    Debug.LogWarning("Unknown camera tag: " + camera.tag);
-                    break;
-            }
+            print("Camera found: Name - " + camera.name + ", Tag - " + camera.tag);
         }
 
-        // Debug
-        if (mainCamera != null)
+        // Attempt to find the main camera
+        mainCamera = Camera.main;
+        if (mainCamera == null)
         {
-            Debug.Log("Main camera found: " + mainCamera.name);
+            print("Main camera not found in hierarchy...");
         }
-        else
-        {
-            Debug.LogError("Main camera not found in hierarchy...");
-        }
-
-        // Debug other cameras...
     }
+
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        print("Scene loaded: " + scene.name);
         InitializeCameras();
 
         if (scene.name == "FinalScene")

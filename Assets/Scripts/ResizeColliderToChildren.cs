@@ -18,7 +18,6 @@ public class ResizeColliderToChildren : MonoBehaviour
             childrenAdded = true;
         }
     }
-
     private void ResizeBoxCollider()
     {
         // Get or add a BoxCollider component
@@ -44,8 +43,14 @@ public class ResizeColliderToChildren : MonoBehaviour
             combinedBounds.Encapsulate(childCollider.bounds);
         }
 
-        // Resize the BoxCollider to encompass all child colliders
-        boxCollider.center = combinedBounds.center - transform.position;
-        boxCollider.size = combinedBounds.size;
+        // Calculate center relative to the parent's transform
+        Vector3 centerRelativeToParent = transform.InverseTransformPoint(combinedBounds.center);
+
+        // Set center of the BoxCollider to the calculated center
+        boxCollider.center = centerRelativeToParent;
+
+        // Set size of the BoxCollider to the size of the combined bounds
+        boxCollider.size = combinedBounds.size; //add some debugs to find out what size it is!!!!
     }
+
 }

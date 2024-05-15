@@ -7,6 +7,9 @@ public class ObjectManager : MonoBehaviour
     public GameObject parentObject;
     public GameObject cameraParent;
 
+    public string finalSceneName;
+    public string flatSceneName;
+
     private void Start()
     {
         // Ensure the parent object persists between scenes
@@ -14,6 +17,8 @@ public class ObjectManager : MonoBehaviour
         {
             DontDestroyOnLoad(parentObject);
             DontDestroyOnLoad(cameraParent);
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
     }
 
@@ -43,5 +48,21 @@ public class ObjectManager : MonoBehaviour
 
         // Load the final scene
         SceneManager.LoadScene("FinalScene");
+    }
+    // This method is called when a new scene is loaded
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == finalSceneName)
+        {
+            // Ensure the parent object and camera parent are active in the final scene
+            parentObject.SetActive(true);
+            print("parentObject is true");
+        }
+        else if (scene.name == flatSceneName)
+        {
+            // Deactivate the parent object and camera parent in the flat scene
+            parentObject.SetActive(false);
+            print("parent object is false");
+        }
     }
 }
