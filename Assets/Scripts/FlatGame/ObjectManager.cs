@@ -37,7 +37,6 @@ public class ObjectManager : MonoBehaviour
         {
             obj.transform.parent = parentObject.transform;
 
-            Debug.Log("Setting parent for " + obj.name + " to " + parentObject.name);
 
             // Set parent for child objects as well
             foreach (Transform child in obj.transform)
@@ -56,13 +55,11 @@ public class ObjectManager : MonoBehaviour
         {
             // Ensure the parent object and camera parent are active in the final scene
             parentObject.SetActive(true);
-            print("parentObject is true");
         }
         else if (scene.name == flatSceneName)
         {
             // Deactivate the parent object and camera parent in the flat scene
             parentObject.SetActive(false);
-            print("parent object is false");
         }
     }
 }

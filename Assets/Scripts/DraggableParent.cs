@@ -1,18 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DraggableParent : MonoBehaviour
 {
-    private Camera mainCamera; // Main camera
-    private Camera camera2;    // Camera with tag "Camera2"
-    private Camera camera3;    // Camera with tag "Camera3"
-    private Camera camera4;    // Camera with tag "Camera4"
-
+    private Camera mainCamera;
     private Vector3 initialMousePosition;
     private Vector3 initialObjectPosition;
+    private Vector3 initialObjectRotation;
+    private bool isDragging = false;
 
-    // Enum to specify the axis of movement
     public enum MovementAxis
     {
         X,
@@ -20,8 +18,15 @@ public class DraggableParent : MonoBehaviour
         Z
     }
 
-    // Current movement axis
+    public enum RotationAxis
+    {
+        X,
+        Y,
+        Z
+    }
+
     private MovementAxis currentAxis = MovementAxis.X;
+    private RotationAxis currentRotationAxis = RotationAxis.X;
 
     private void Start()
     {
@@ -35,40 +40,40 @@ public class DraggableParent : MonoBehaviour
 
     private void InitializeCameras()
     {
-        // Find all cameras in the scene
         Camera[] cameras = FindObjectsOfType<Camera>();
 
-        // Debug: Print names and tags of all cameras found
         foreach (Camera camera in cameras)
         {
-            print("Camera found: Name - " + camera.name + ", Tag - " + camera.tag);
+            // Handle camera initialization
         }
 
-        // Attempt to find the main camera
         mainCamera = Camera.main;
         if (mainCamera == null)
         {
-            print("Main camera not found in hierarchy...");
+            // Handle main camera not found
         }
     }
 
-
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        print("Scene loaded: " + scene.name);
         InitializeCameras();
 
         if (scene.name == "FinalScene")
         {
-            // Find buttons in the loaded scene based on tags
             GameObject[] upDownButtons = GameObject.FindGameObjectsWithTag("UpDown");
             GameObject[] leftRightButtons = GameObject.FindGameObjectsWithTag("LeftRight");
             GameObject[] forwardBackButtons = GameObject.FindGameObjectsWithTag("ForwardBAck");
+            GameObject[] rotateForwardBackButton = GameObject.FindGameObjectsWithTag("RForwardBack");
+            GameObject[] rotateLeftRightButton = GameObject.FindGameObjectsWithTag("RLeftRight");
+            GameObject[] rotateSideToSideButton = GameObject.FindGameObjectsWithTag("RSide");
 
-            // Assign listeners to each button
             AssignButtonListeners(upDownButtons, MovementAxis.Y);
             AssignButtonListeners(leftRightButtons, MovementAxis.Z);
             AssignButtonListeners(forwardBackButtons, MovementAxis.X);
+
+            AssignRotationButtonListeners(rotateForwardBackButton, RotationAxis.Z);
+            AssignRotationButtonListeners(rotateLeftRightButton, RotationAxis.X);
+            AssignRotationButtonListeners(rotateSideToSideButton, RotationAxis.Y);
         }
     }
 
@@ -76,22 +81,38 @@ public class DraggableParent : MonoBehaviour
     {
         foreach (GameObject buttonObject in buttons)
         {
-            // Add a new EventTrigger component if it doesn't exist
             EventTrigger eventTrigger = buttonObject.GetComponent<EventTrigger>();
             if (eventTrigger == null)
             {
                 eventTrigger = buttonObject.AddComponent<EventTrigger>();
             }
 
-            // Create a new trigger for PointerClick event
             EventTrigger.Entry entry = new EventTrigger.Entry();
             entry.eventID = EventTriggerType.PointerClick;
-
-            // Create a new delegate for the event callback
             entry.callback.AddListener((data) => { OnButtonClick(axis); });
-
-            // Add the trigger to the EventTrigger component
             eventTrigger.triggers.Add(entry);
+        }
+    }
+
+    private void AssignRotationButtonListeners(GameObject[] buttons, RotationAxis axis)
+    {
+        foreach (GameObject button in buttons)
+        {
+            EventTrigger eventTrigger = button.GetComponent<EventTrigger>();
+            if (eventTrigger == null)
+            {
+                eventTrigger = button.AddComponent<EventTrigger>();
+            }
+
+            EventTrigger.Entry pointerDownEntry = new EventTrigger.Entry();
+            pointerDownEntry.eventID = EventTriggerType.PointerDown;
+            pointerDownEntry.callback.AddListener((data) => { StartDragRotation(axis); });
+            eventTrigger.triggers.Add(pointerDownEntry);
+
+            EventTrigger.Entry pointerUpEntry = new EventTrigger.Entry();
+            pointerUpEntry.eventID = EventTriggerType.PointerUp;
+            pointerUpEntry.callback.AddListener((data) => { StopDragRotation(); });
+            eventTrigger.triggers.Add(pointerUpEntry);
         }
     }
 
@@ -100,39 +121,61 @@ public class DraggableParent : MonoBehaviour
         SetCurrentAxis(axis);
     }
 
+    private void StartDragRotation(RotationAxis axis)
+    {
+        initialMousePosition = Input.mousePosition;
+        initialObjectRotation = transform.eulerAngles;
+        isDragging = true;
+        SetCurrentRotationAxis(axis);
+    }
+
+    private void Update()
+    {
+        if (isDragging)
+        {
+            Vector3 mouseDelta = Input.mousePosition - initialMousePosition;
+            switch (currentRotationAxis)
+            {
+                case RotationAxis.X:
+                    transform.rotation = Quaternion.Euler(initialObjectRotation.x - mouseDelta.y, initialObjectRotation.y, initialObjectRotation.z);
+                    break;
+                case RotationAxis.Y:
+                    transform.rotation = Quaternion.Euler(initialObjectRotation.x, initialObjectRotation.y + mouseDelta.x, initialObjectRotation.z);
+                    break;
+                case RotationAxis.Z:
+                    transform.rotation = Quaternion.Euler(initialObjectRotation.x, initialObjectRotation.y, initialObjectRotation.z - mouseDelta.x);
+                    break;
+            }
+        }
+    }
+
+    private void StopDragRotation()
+    {
+        isDragging = false;
+    }
+
     private void OnMouseDown()
     {
-        // Store the initial mouse position in world space
         initialMousePosition = GetMouseWorldPosition();
-
-        // Store the initial object position
         initialObjectPosition = transform.position;
     }
 
     private void OnMouseDrag()
     {
-        // Calculate the new position of the object based on the difference in mouse position
         Vector3 offset = GetMouseWorldPosition() - initialMousePosition;
-
-        // Apply the offset to the object's position based on the current movement axis
         Vector3 newPosition = initialObjectPosition;
         switch (currentAxis)
         {
             case MovementAxis.Y:
                 newPosition.y += offset.y;
-                print("moving along y");
                 break;
             case MovementAxis.Z:
                 newPosition.z += offset.z;
-                print("moving along x");
                 break;
             case MovementAxis.X:
                 newPosition.x += offset.x;
-                print("moving along z");
                 break;
         }
-
-        // Update the object's position
         transform.position = newPosition;
     }
 
@@ -143,20 +186,21 @@ public class DraggableParent : MonoBehaviour
             Debug.LogError("Main camera reference is null in DraggableParent script.");
             return Vector3.zero;
         }
-
-        // Convert mouse position from screen space to world space using the main camera
         Vector3 mousePosition = Input.mousePosition;
         mousePosition.z = -mainCamera.transform.position.z;
         return mainCamera.ScreenToWorldPoint(mousePosition);
     }
 
-    // Method to set the current movement axis
     private void SetCurrentAxis(MovementAxis axis)
     {
         currentAxis = axis;
     }
 
-    // Method to switch the active camera
+    private void SetCurrentRotationAxis(RotationAxis axis)
+    {
+        currentRotationAxis = axis;
+    }
+
     public void SwitchCamera(Camera newCamera)
     {
         mainCamera = newCamera;

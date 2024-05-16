@@ -60,13 +60,43 @@ namespace CrochetingMR
         }
         public void CreateSingleCrochetMR()
         {
-            // Calculate the position for the new stitch using polar coordinates
-            float angle = (2 * Mathf.PI * stitches.Count) / (stitches.Count + 1); // Distribute the stitches evenly around the circle
+            // Variables for position and rotation
+            Vector3 newPosition;
+            Quaternion rotation = Quaternion.identity;
 
-            // If it's the first row, rotate the prefab by 90 degrees along the y-axis
-            Quaternion rotation = rowCounter == 1 ? Quaternion.Euler(0f, 90f, 0f) : Quaternion.identity;
+            // Parameters for the circular pattern
+            float stitchRadius = 0.3f; // Adjust based on the desired distance between stitches
+            float angleIncrement = (2 * Mathf.PI) / (stitches.Count + 1);
 
-            Vector3 newPosition = magicRingCenter + new Vector3(Mathf.Cos(angle) * magicRingRadius, 0f, Mathf.Sin(angle) * magicRingRadius);
+            if (stitches.Count == 0)
+            {
+                // For the first stitch, place it at the instantiation position
+                newPosition = instantiationPosition;
+            }
+            else
+            {
+                // Calculate angle for the new stitch
+                float angle = stitches.Count * angleIncrement;
+
+                // Calculate the new position using polar coordinates
+                newPosition = instantiationPosition + new Vector3(Mathf.Cos(angle) * stitchRadius, 0f, Mathf.Sin(angle) * stitchRadius);
+
+                // Adjust the position based on row height if needed
+                if (rowCounter > 1)
+                {
+                    newPosition.y += rowHeight * (rowCounter - 1);
+                }
+
+                // Incrementally adjust the Y-axis rotation for the circular effect
+                float rotationY = stitches.Count * angleIncrement * Mathf.Rad2Deg; // Convert radians to degrees
+                rotation = Quaternion.Euler(0f, rotationY, 0f);
+            }
+
+            // Rotate the first row stitches by 90 degrees along the z-axis if needed
+            if (rowCounter == 1)
+            {
+                rotation *= Quaternion.Euler(0f, 0f, 90f);
+            }
 
             // Instantiate the stitch prefab at the calculated position with the appropriate rotation
             GameObject newStitch = Instantiate(prefabToInstantiate, newPosition, rotation);
@@ -76,6 +106,10 @@ namespace CrochetingMR
 
             // Update the last stitch reference
             lastStitch = newStitch;
+
+            // Debug logs to verify positions and rotations
+            Debug.Log($"Stitch {stitches.Count} position: {newPosition}");
+            Debug.Log($"Stitch {stitches.Count} rotation: {rotation.eulerAngles}");
         }
 
         public void CreateIncreaseStitchMR()
