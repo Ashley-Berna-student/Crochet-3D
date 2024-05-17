@@ -10,6 +10,7 @@ public class DraggableParent : MonoBehaviour
     private Vector3 initialObjectPosition;
     private Vector3 initialObjectRotation;
     private bool isDragging = false;
+    private bool isMovementMode = true; // true for movement, false for rotation
 
     public enum MovementAxis
     {
@@ -40,17 +41,10 @@ public class DraggableParent : MonoBehaviour
 
     private void InitializeCameras()
     {
-        Camera[] cameras = FindObjectsOfType<Camera>();
-
-        foreach (Camera camera in cameras)
-        {
-            // Handle camera initialization
-        }
-
         mainCamera = Camera.main;
         if (mainCamera == null)
         {
-            // Handle main camera not found
+            Debug.LogError("Main camera not found.");
         }
     }
 
@@ -67,9 +61,9 @@ public class DraggableParent : MonoBehaviour
             GameObject[] rotateLeftRightButton = GameObject.FindGameObjectsWithTag("RLeftRight");
             GameObject[] rotateSideToSideButton = GameObject.FindGameObjectsWithTag("RSide");
 
-            AssignButtonListeners(upDownButtons, MovementAxis.Y);
-            AssignButtonListeners(leftRightButtons, MovementAxis.Z);
-            AssignButtonListeners(forwardBackButtons, MovementAxis.X);
+            AssignMovementButtonListeners(upDownButtons, MovementAxis.Y);
+            AssignMovementButtonListeners(leftRightButtons, MovementAxis.Z);
+            AssignMovementButtonListeners(forwardBackButtons, MovementAxis.X);
 
             AssignRotationButtonListeners(rotateForwardBackButton, RotationAxis.Z);
             AssignRotationButtonListeners(rotateLeftRightButton, RotationAxis.X);
@@ -77,7 +71,7 @@ public class DraggableParent : MonoBehaviour
         }
     }
 
-    private void AssignButtonListeners(GameObject[] buttons, MovementAxis axis)
+    private void AssignMovementButtonListeners(GameObject[] buttons, MovementAxis axis)
     {
         foreach (GameObject buttonObject in buttons)
         {
@@ -89,7 +83,7 @@ public class DraggableParent : MonoBehaviour
 
             EventTrigger.Entry entry = new EventTrigger.Entry();
             entry.eventID = EventTriggerType.PointerClick;
-            entry.callback.AddListener((data) => { OnButtonClick(axis); });
+            entry.callback.AddListener((data) => { OnMovementButtonClick(axis); });
             eventTrigger.triggers.Add(entry);
         }
     }
@@ -106,25 +100,34 @@ public class DraggableParent : MonoBehaviour
 
             EventTrigger.Entry pointerDownEntry = new EventTrigger.Entry();
             pointerDownEntry.eventID = EventTriggerType.PointerDown;
-            pointerDownEntry.callback.AddListener((data) => { StartDragRotation(axis); });
+            pointerDownEntry.callback.AddListener((data) => { OnRotationButtonPressed(axis); });
             eventTrigger.triggers.Add(pointerDownEntry);
 
             EventTrigger.Entry pointerUpEntry = new EventTrigger.Entry();
             pointerUpEntry.eventID = EventTriggerType.PointerUp;
-            pointerUpEntry.callback.AddListener((data) => { StopDragRotation(); });
+            pointerUpEntry.callback.AddListener((data) => { OnRotationButtonReleased(); });
             eventTrigger.triggers.Add(pointerUpEntry);
         }
     }
 
-    private void OnButtonClick(MovementAxis axis)
+    private void OnMovementButtonClick(MovementAxis axis)
     {
+        isMovementMode = true;
         SetCurrentAxis(axis);
+    }
+
+    private void OnRotationButtonPressed(RotationAxis axis)
+    {
+        isMovementMode = false;
+        StartDragRotation(axis);
     }
 
     private void StartDragRotation(RotationAxis axis)
     {
         initialMousePosition = Input.mousePosition;
-        initialObjectRotation = transform.eulerAngles;
+        initialObjectPosition = transform.position; // Store initial position as well
+        initialObjectRotation = transform.eulerAngles; // Store initial rotation
+
         isDragging = true;
         SetCurrentRotationAxis(axis);
     }
@@ -133,31 +136,41 @@ public class DraggableParent : MonoBehaviour
     {
         if (isDragging)
         {
-            Vector3 mouseDelta = Input.mousePosition - initialMousePosition;
-            switch (currentRotationAxis)
+            if (isMovementMode)
             {
-                case RotationAxis.X:
-                    transform.rotation = Quaternion.Euler(initialObjectRotation.x - mouseDelta.y, initialObjectRotation.y, initialObjectRotation.z);
-                    break;
-                case RotationAxis.Y:
-                    transform.rotation = Quaternion.Euler(initialObjectRotation.x, initialObjectRotation.y + mouseDelta.x, initialObjectRotation.z);
-                    break;
-                case RotationAxis.Z:
-                    transform.rotation = Quaternion.Euler(initialObjectRotation.x, initialObjectRotation.y, initialObjectRotation.z - mouseDelta.x);
-                    break;
+                OnMouseDrag();
+            }
+            else
+            {
+                OnMouseRotate();
             }
         }
     }
 
-    private void StopDragRotation()
-    {
-        isDragging = false;
-    }
-
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         initialMousePosition = GetMouseWorldPosition();
-        initialObjectPosition = transform.position;
+
+        if (isMovementMode)
+        {
+            initialObjectPosition = transform.position;
+        }
+        else
+        {
+            initialObjectRotation = transform.eulerAngles;
+        }
+
+        isDragging = true;
+    }
+
+    private void OnMouseUp()
+    {
+        isDragging = false;
     }
 
     private void OnMouseDrag()
@@ -177,6 +190,27 @@ public class DraggableParent : MonoBehaviour
                 break;
         }
         transform.position = newPosition;
+    }
+
+    private void OnMouseRotate()
+    {
+        Vector3 mouseDelta = Input.mousePosition - initialMousePosition;
+
+        switch (currentRotationAxis)
+        {
+            case RotationAxis.X:
+                float rotationX = initialObjectRotation.x - mouseDelta.y;
+                transform.rotation = Quaternion.Euler(rotationX, initialObjectRotation.y, initialObjectRotation.z);
+                break;
+            case RotationAxis.Y:
+                float rotationY = initialObjectRotation.y + mouseDelta.x;
+                transform.rotation = Quaternion.Euler(initialObjectRotation.x, rotationY, initialObjectRotation.z);
+                break;
+            case RotationAxis.Z:
+                float rotationZ = initialObjectRotation.z - mouseDelta.x;
+                transform.rotation = Quaternion.Euler(initialObjectRotation.x, initialObjectRotation.y, rotationZ);
+                break;
+        }
     }
 
     private Vector3 GetMouseWorldPosition()
@@ -199,6 +233,11 @@ public class DraggableParent : MonoBehaviour
     private void SetCurrentRotationAxis(RotationAxis axis)
     {
         currentRotationAxis = axis;
+    }
+
+    private void OnRotationButtonReleased()
+    {
+        isDragging = false;
     }
 
     public void SwitchCamera(Camera newCamera)
