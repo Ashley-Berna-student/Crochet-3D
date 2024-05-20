@@ -9,6 +9,7 @@ public class ObjectManager : MonoBehaviour
 
     public string finalSceneName;
     public string flatSceneName;
+    public string mainMenuName;
 
     private void Start()
     {
@@ -60,6 +61,12 @@ public class ObjectManager : MonoBehaviour
         {
             // Deactivate the parent object and camera parent in the flat scene
             parentObject.SetActive(false);
+        }
+        else if (scene.name == mainMenuName)
+        {
+            Destroy(parentObject);
+
+            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
     }
 }

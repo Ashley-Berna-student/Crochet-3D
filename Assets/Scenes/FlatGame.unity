@@ -3450,6 +3450,7 @@ MonoBehaviour:
   cameraParent: {fileID: 541101717}
   finalSceneName: FinalScene
   flatSceneName: FlatGame
+  mainMenuName: mainMenu
 --- !u!1001 &718716163
 PrefabInstance:
   m_ObjectHideFlags: 0

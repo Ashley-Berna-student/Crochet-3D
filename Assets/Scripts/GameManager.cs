@@ -21,6 +21,5 @@ public class GameManager : MonoBehaviour
     public static void LoadScene(string newSceneName)
     {
         SceneManager.LoadScene(newSceneName);
-        print(newSceneName);
     }
 }

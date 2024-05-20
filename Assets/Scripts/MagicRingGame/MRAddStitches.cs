@@ -65,7 +65,7 @@ namespace CrochetingMR
             Quaternion rotation = Quaternion.identity;
 
             // Parameters for the circular pattern
-            float stitchRadius = 0.3f; // Adjust based on the desired distance between stitches
+            float stitchRadius = 0.1f; // Adjust based on the desired distance between stitches
             float angleIncrement = (2 * Mathf.PI) / (stitches.Count + 1);
 
             if (stitches.Count == 0)
