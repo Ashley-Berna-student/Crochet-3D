@@ -17,6 +17,7 @@ TagManager:
   - RForwardBack
   - RLeftRight
   - RSide
+  - KeyboardAudio
   layers:
   - Default
   - TransparentFX

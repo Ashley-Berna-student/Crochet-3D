@@ -1,17 +1,24 @@
 using UnityEngine;
 
-public class AudioTimer : MonoBehaviour
+namespace WordsForTutorial
 {
-    public int durationInFrames = 10;
-    private int frameCount = 0;
-
-    void Update()
+    public class AudioTimer : MonoBehaviour
     {
-        frameCount++;
+        private ScrollingLetters scrollingLetters;
 
-        if (frameCount >= durationInFrames )
+        void Start()
         {
-            Destroy(gameObject);
+            scrollingLetters = FindObjectOfType<ScrollingLetters>();
+
+            if (scrollingLetters == null)
+            {
+                Debug.Log("ScrollingLetters component is null");
+            }
+        }
+
+        void Update()
+        {
+            // No need for any update logic here since we're destroying after text animation
         }
     }
 }

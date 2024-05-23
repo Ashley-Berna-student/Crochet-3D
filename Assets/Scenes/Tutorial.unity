@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterInterval: 0.1
+  lastCharacter: 0
 --- !u!114 &3300534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2755,6 +2756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterInterval: 0.1
+  lastCharacter: 0
 --- !u!114 &360225349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3267,7 +3269,7 @@ GameObject:
   - component: {fileID: 412096298}
   m_Layer: 0
   m_Name: KeyBoardClacks
-  m_TagString: Untagged
+  m_TagString: KeyboardAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3395,7 +3397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66dace6ac342c40828faff7f2445dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInFrames: 6900
 --- !u!1 &429164957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3447,6 +3448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterInterval: 0.1
+  lastCharacter: 0
 --- !u!114 &429164960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4028,6 +4030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterInterval: 0.1
+  lastCharacter: 0
 --- !u!114 &473472997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4855,7 +4858,7 @@ GameObject:
   - component: {fileID: 556233749}
   m_Layer: 0
   m_Name: KeyBoardClacks
-  m_TagString: Untagged
+  m_TagString: KeyboardAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4983,7 +4986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66dace6ac342c40828faff7f2445dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInFrames: 3850
 --- !u!1 &562470495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6245,7 +6247,7 @@ GameObject:
   - component: {fileID: 666525755}
   m_Layer: 0
   m_Name: KeyBoardClacks
-  m_TagString: Untagged
+  m_TagString: KeyboardAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6373,7 +6375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66dace6ac342c40828faff7f2445dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInFrames: 1900
 --- !u!1 &693739436
 GameObject:
   m_ObjectHideFlags: 0
@@ -6425,6 +6426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterInterval: 0.1
+  lastCharacter: 0
 --- !u!114 &693739439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7526,7 +7528,7 @@ GameObject:
   - component: {fileID: 871454513}
   m_Layer: 0
   m_Name: KeyBoardClacks
-  m_TagString: Untagged
+  m_TagString: KeyboardAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7654,7 +7656,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66dace6ac342c40828faff7f2445dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInFrames: 3400
 --- !u!4 &872697080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4124841055244531856, guid: e605d19a458dd1e4385029708992fca1, type: 3}
@@ -7837,6 +7838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterInterval: 0.1
+  lastCharacter: 0
 --- !u!114 &891657971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7930,6 +7932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterInterval: 0.1
+  lastCharacter: 0
 --- !u!114 &895087849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8020,7 +8023,7 @@ GameObject:
   - component: {fileID: 906157357}
   m_Layer: 0
   m_Name: KeyBoardClacks
-  m_TagString: Untagged
+  m_TagString: KeyboardAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8148,7 +8151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66dace6ac342c40828faff7f2445dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInFrames: 3000
 --- !u!1 &910993660
 GameObject:
   m_ObjectHideFlags: 0
@@ -8485,6 +8487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterInterval: 0.1
+  lastCharacter: 0
 --- !u!114 &932864559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10960,7 +10963,7 @@ GameObject:
   - component: {fileID: 1259782301}
   m_Layer: 0
   m_Name: KeyBoardClacks
-  m_TagString: Untagged
+  m_TagString: KeyboardAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11088,7 +11091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66dace6ac342c40828faff7f2445dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInFrames: 3200
 --- !u!1 &1261867890
 GameObject:
   m_ObjectHideFlags: 0
@@ -12241,7 +12243,7 @@ GameObject:
   - component: {fileID: 1416737727}
   m_Layer: 0
   m_Name: KeyBoardClacks
-  m_TagString: Untagged
+  m_TagString: KeyboardAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12369,7 +12371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66dace6ac342c40828faff7f2445dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInFrames: 2500
 --- !u!1 &1420265103
 GameObject:
   m_ObjectHideFlags: 0
@@ -13551,7 +13552,7 @@ GameObject:
   - component: {fileID: 1532043091}
   m_Layer: 0
   m_Name: KeyBoardClacks
-  m_TagString: Untagged
+  m_TagString: KeyboardAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13583,7 +13584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66dace6ac342c40828faff7f2445dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInFrames: 3920
 --- !u!82 &1532043091
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14042,7 +14042,7 @@ GameObject:
   - component: {fileID: 1607126594}
   m_Layer: 0
   m_Name: KeyBoardClacks
-  m_TagString: Untagged
+  m_TagString: KeyboardAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14170,7 +14170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66dace6ac342c40828faff7f2445dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInFrames: 2700
 --- !u!1 &1611169416
 GameObject:
   m_ObjectHideFlags: 0
@@ -14805,7 +14804,7 @@ GameObject:
   - component: {fileID: 1671930191}
   m_Layer: 0
   m_Name: KeyBoardClacks
-  m_TagString: Untagged
+  m_TagString: KeyboardAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14933,7 +14932,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66dace6ac342c40828faff7f2445dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInFrames: 2400
 --- !u!1001 &1698025110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16084,6 +16082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterInterval: 0.1
+  lastCharacter: 0
 --- !u!114 &1864719899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16904,6 +16903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterInterval: 0.1
+  lastCharacter: 0
 --- !u!114 &1969660330
 MonoBehaviour:
   m_ObjectHideFlags: 0
